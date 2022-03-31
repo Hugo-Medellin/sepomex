@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}{% endblock %} Datos</h1>
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for bus in busq %}
+    <li>
+        <div class="info">
+            <span>{{ bus['estado'] }}</span>
+            <span>{{ bus['municipio'] }}</span>
+            <span>{{ bus['ciudad'] }}</span>
+            <span>{{ bus['cp'] }}</span>
+            <span>{{ bus['asentamiento'] }}</span>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
